@@ -1,0 +1,5 @@
+[user]
+  name = Vladimir Horvat
+  email = vladimir.horvat@project1.com
+[core]
+  sshCommand = "ssh -i ~/.ssh/project1_id_ed25519"
