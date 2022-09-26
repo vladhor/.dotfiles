@@ -195,7 +195,7 @@ alias gcob='git branch | fzf | xargs git checkout'    # checkout branch using fz
 # alias gclean='git reset --hard && git clean -dfx'
 # alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-alias ls='lsd -la'
+alias ls='colorls -la'
 alias vi=vim
 alias vim=nvim
 # open vim config from anywhere

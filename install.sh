@@ -31,7 +31,7 @@ nix-env -iA \
 	nixpkgs.fzf \
 	nixpkgs.ripgrep \
 	nixpkgs.direnv \
-	nixpkgs.lsd \
+	nixpkgs.colorls \
 	nixpkgs.ranger \
 	nixpkgs.terraform \
 	nixpkgs.tflint \
