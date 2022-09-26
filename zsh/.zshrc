@@ -130,7 +130,6 @@ export EDITOR='vim'
 #########################
 ###### COMMON ALIASES 
 ########################
-alias ll='ls -la --color'
 alias r=ranger
 alias cdd='cd ..'
 alias cddd='cd ../..'
@@ -196,6 +195,7 @@ alias gcob='git branch | fzf | xargs git checkout'    # checkout branch using fz
 # alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 alias ls='colorls -la'
+alias ll='ls'
 alias vi=vim
 alias vim=nvim
 # open vim config from anywhere
