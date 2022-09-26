@@ -1,11 +1,8 @@
-require 'nvim-treesitter.install'.compilers = { "clang" }
-
 require'nvim-treesitter.configs'.setup {
     -- ensure_installed can be "all" or a list of languages { "python", "bash" }
     ensure_installed = {
       'python',
       'markdown',
-      'bash',
       'vim',
       'lua',
       'dockerfile',
