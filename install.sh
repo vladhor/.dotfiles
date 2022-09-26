@@ -82,7 +82,7 @@ echo "#############################################"
 echo "####            STOW                     ####"
 echo "#############################################"
 echo ""
-stow git
+# stow git
 stow nvim
 stow nixos-npm
 stow powerlevel10k
