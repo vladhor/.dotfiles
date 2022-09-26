@@ -78,26 +78,26 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  ansible
-  aws
-  cp
-  docker
-  helm
-  history
-  kubectl
-  kubectx
-  man
-  python
-  sudo
-  terraform
-  tmux
-  vagrant
-  autojump
-  pip
-  zsh-interactive-cd
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+#  git
+#  ansible
+#  aws
+#  cp
+#  docker
+#  helm
+#  history
+#  kubectl
+#  kubectx
+#  man
+#  python
+#  sudo
+#  terraform
+#  tmux
+#  vagrant
+#  autojump
+#  pip
+#  zsh-interactive-cd
+#  zsh-autosuggestions
+#  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -195,7 +195,7 @@ alias gcob='git branch | fzf | xargs git checkout'    # checkout branch using fz
 # alias gclean='git reset --hard && git clean -dfx'
 # alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-alias ls='lsd'
+alias ls='lsd -la'
 alias vi=vim
 alias vim=nvim
 # open vim config from anywhere
@@ -224,18 +224,21 @@ export FZF_ALT_C_COMMAND="rg --hidden --files --null | xargs -0 dirname | uniq"
 bindkey '^ ' autosuggest-accept
 
 # Activating autojump utility 
-. /usr/share/autojump/autojump.sh
-export PATH=/home/vlado/.cargo/bin:$PATH
+#. /usr/share/autojump/autojump.sh
+#export PATH=/home/vlado/.cargo/bin:$PATH
 
 # Export nvm completion settings for lukechilds/zsh-nvm plugin
 # Note: This must be exported before the plugin is bundled
 export NVM_DIR=${HOME}/.nvm
 export NVM_COMPLETION=true
 
-# initialization nix
-if [ -e /home/vlado/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vlado/.nix-profile/etc/profile/nix.sh; fi
+# Initialization nix
+if [ -e /home/vlado/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vlado/.nix-profile/etc/profile.d/nix.sh; fi
+export PATH=~/.npm-packages/bin:$PATH
+export NODE_PATH=~/.npm-packages/lib/node_modules
 
 # Source antibody ohmyzsh plugins
+# NOTE: in case of updated plugin you need to resource 
 if [ -e ~/.zsh_plugins.sh ]; then source ~/.zsh_plugins.sh; fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

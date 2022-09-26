@@ -46,11 +46,11 @@ require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['groovyls'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    cmd = { "java", "-jar", "/home/vlado/.local/share/nvim/lsp_servers/groovyls/build/libs/groovyls-all.jar" }
-}
+-- require('lspconfig')['groovyls'].setup{
+--     on_attach = on_attach,
+--     flags = lsp_flags,
+--     cmd = { "java", "-jar", "/home/vlado/.local/share/nvim/lsp_servers/groovyls/build/libs/groovyls-all.jar" }
+-- }
 require('lspconfig')['vimls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
@@ -63,3 +63,15 @@ require('lspconfig')['bashls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+require('lspconfig')['dockerls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+-- require('lspconfig')['terraformls'].setup{
+--     on_attach = on_attach,
+--     flags = lsp_flags,
+-- }
+-- require('lspconfig')['ansiblels'].setup{
+--     on_attach = on_attach,
+--     flags = lsp_flags,
+-- }

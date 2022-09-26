@@ -64,17 +64,17 @@ noremap <leader>w :w<cr>
 "  :PlugUpdate    - Install or update plugins
 "  :PlugUpgrade   - Upgrade vim-plug itself
 "  :PlugStatus    - Check the status of plugins
-"call plug#begin('~/.config/nvim/plugged')
+" call plug#begin('~/.config/nvim/plugged')
 call plug#begin(stdpath("data") . "/plugged")
 
   " Colorscheme Gruvbox
   Plug 'morhetz/gruvbox'
 
   " LSP Servers requirements
-  Plug 'neovim/nvim-lspconfig'
+  Plug 'neovim/nvim-lspconfig'				" --> check installed servers: :LspInstallInfo
   Plug 'williamboman/nvim-lsp-installer'
   Plug 'glepnir/lspsaga.nvim'
-  Plug 'jose-elias-alvarez/null-ls.nvim'
+  Plug 'jose-elias-alvarez/null-ls.nvim'		" --> formatting/diagnostics a.k.a linters; check loaded fmt/linter: :NullLsInfo
 
   " Makes autocompletion 
   Plug 'hrsh7th/nvim-compe'
@@ -131,7 +131,7 @@ call plug#end()
 " ########################
 set background=dark
 set termguicolors
-colorscheme gruvbox
+silent! colorscheme gruvbox
 
 
 

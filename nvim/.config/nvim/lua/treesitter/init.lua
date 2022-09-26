@@ -5,7 +5,12 @@ require'nvim-treesitter.configs'.setup {
       'bash',
       'markdown',
       'vim',
-      'lua'
+      'lua',
+      'dockerfile',
+      'gitignore',
+      'html',
+      'json',
+      'yaml'
     },
 
     sync_install = false,
