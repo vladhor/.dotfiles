@@ -26,7 +26,6 @@ ohmyzsh/ohmyzsh path:plugins/vagrant
 ohmyzsh/ohmyzsh path:plugins/vault
 ohmyzsh/ohmyzsh path:plugins/z
 ohmyzsh/ohmyzsh path:plugins/zsh-interactive-cd
-ohmyzsh/ohmyzsh path:plugins/zsh-navigation-tools
 
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions

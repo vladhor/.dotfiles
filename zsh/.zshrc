@@ -194,12 +194,6 @@ alias gcob='git branch | fzf | xargs git checkout'    # checkout branch using fz
 # alias gclean='git reset --hard && git clean -dfx'
 # alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-alias ls='colorls -la'
-alias ll='ls'
-alias vi=vim
-alias vim=nvim
-# open vim config from anywhere
-alias vimrc='vim ${HOME}/.config/nvim/init.vim'
 
 # Others Aliases:
 # ripgrep -> search tool
@@ -240,6 +234,13 @@ export NODE_PATH=~/.npm-packages/lib/node_modules
 # Source antibody ohmyzsh plugins
 # NOTE: in case of updated plugin you need to resource 
 if [ -e ~/.zsh_plugins.sh ]; then source ~/.zsh_plugins.sh; fi
+
+# CUSTOM ALIASES: 
+alias ls='colorls'
+alias ll='colorls -la'
+alias vi=vim
+alias vim=nvim
+alias vimrc='vim ${HOME}/.config/nvim/init.vim'         # open vim config from anywhere
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
