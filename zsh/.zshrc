@@ -136,11 +136,6 @@ export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border --margin=1 --pad
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="rg --hidden --files --null | xargs -0 dirname | uniq"
 
-
-# Activating autojump utility 
-#. /usr/share/autojump/autojump.sh
-#export PATH=/home/vlado/.cargo/bin:$PATH
-
 # Export nvm completion settings for lukechilds/zsh-nvm plugin
 # Note: This must be exported before the plugin is bundled
 export NVM_DIR=${HOME}/.nvm
@@ -156,6 +151,7 @@ export NODE_PATH=~/.npm-packages/lib/node_modules
 if [ -e ~/.zsh_plugins.sh ]; then source ~/.zsh_plugins.sh; fi
 
 # CUSTOM ALIASES: 
+alias j=z
 alias r=ranger
 alias ls='colorls'
 alias ll='colorls -la'
