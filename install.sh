@@ -63,6 +63,9 @@ nix-env -iA \
 # LSP servers:
 nix-env -iA \
       nixpkgs.terraform-ls
+# Telescope:
+nix-env -iA \
+      nixpkgs.fd
 
 
 # # Install left packages via apt
