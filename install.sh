@@ -38,8 +38,8 @@ nix-env -iA \
 	nixpkgs.jq \
 	nixpkgs.hugo \
 	nixpkgs.pass \
-	nixpkgs.autojump \
 	nixpkgs.gnupg \
+  nixpkgs.unzip \
 	nixpkgs.helmfile \
 	nixpkgs.groovy \
 	nixpkgs.tmuxinator \
