@@ -39,7 +39,14 @@ set cursorcolumn                              " Highlight the screen column of t
 set autoread                                  " Automatically read files when they've changed
 set nocompatible                              " Disable compatibility with vi which can cause unexpected issues
 set iskeyword+=-                              " It treats the "abc-abc" as a one word
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+
+if system('uname -a | grep microsoft') != ''
+  augroup myYank
+    autocmd!
+    autocmd TextYankPost * :call system('clip.exe', @")
+  augroup END
+endif"
 
 
 " ################################
