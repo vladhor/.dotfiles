@@ -44,7 +44,8 @@ nix-env -iA \
 	nixpkgs.groovy \
 	nixpkgs.tmuxinator \
 	nixpkgs.nodejs \
-	nixpkgs.python3
+	nixpkgs.python3 \
+  nixpkgs.home-manager
 # Null-ls formatting:
 nix-env -iA \
       nixpkgs.black \
