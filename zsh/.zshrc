@@ -136,8 +136,6 @@ export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border --margin=1 --pad
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="rg --hidden --files --null | xargs -0 dirname | uniq"
 
-# Binding Ctrl + Space to autocomplete suggestion after typing command in zsh
-bindkey '^ ' autosuggest-accept
 
 # Activating autojump utility 
 #. /usr/share/autojump/autojump.sh
@@ -167,3 +165,6 @@ alias vimrc='vim ${HOME}/.config/nvim/init.vim'         # open vim config from a
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Binding Ctrl + Space to autocomplete suggestion after typing command in zsh
+bindkey '^ ' autosuggest-accept
