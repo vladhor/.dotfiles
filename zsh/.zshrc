@@ -78,29 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-#  git
-#  ansible
-#  aws
-#  cp
-#  docker
-#  helm
-#  history
-#  kubectl
-#  kubectx
-#  man
-#  python
-#  sudo
-#  terraform
-#  tmux
-#  vagrant
-#  autojump
-#  pip
-#  zsh-interactive-cd
-#  zsh-autosuggestions
-#  zsh-syntax-highlighting
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -127,13 +105,6 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#########################
-###### COMMON ALIASES 
-########################
-alias r=ranger
-alias cdd='cd ..'
-alias cddd='cd ../..'
-alias cdddd='cd ../../..'
 
 #########################
 ###### TMUX ALIASES
@@ -147,57 +118,8 @@ alias ta='t a -t'
 alias tls='t ls'
 alias tn='t new -t'
 
-#########################
-###### GIT ALIASES
-########################
-# alias g='git'
-alias gst='git status'
-alias gcob='git branch | fzf | xargs git checkout'    # checkout branch using fzf
-# alias gd='git diff'
-# alias gdc='git diff --cached'
-# alias gl='git pull'
-# alias gup='git pull --rebase'
-# alias gp='git push'
-# alias gd='git diff'
-# alias gc='git commit -v'
-# alias gc!='git commit -v --amend'
-# alias gca='git commit -v -a'
-# alias gca!='git commit -v -a --amend'
-# alias gcmsg='git commit -m'
-# alias gco='git checkout'
-# alias gcm='git checkout master'
-# alias gr='git remote'
-# alias grv='git remote -v'
-# alias grmv='git remote rename'
-# alias grrm='git remote remove'
-# alias grset='git remote set-url'
-# alias grup='git remote update'
-# alias grbi='git rebase -i'
-# alias grbc='git rebase --continue'
-# alias grba='git rebase --abort'
-# alias gb='git branch'
-# alias gba='git branch -a'
-# alias gcount='git shortlog -sn'
-# alias gcl='git config --list'
-# alias gcp='git cherry-pick'
-# alias glg='git log --stat --max-count=10'
-# alias glg2='git log -p -2'
-# alias glgg='git log --graph --max-count=10'
-# alias glgga='git log --graph --decorate --all'
-# alias glo='git log --oneline --decorate --color'
-# alias glog='git log --oneline --decorate --color --graph'
-# alias gss='git status -s'
-# alias ga='git add'
-# alias gm='git merge'
-# alias grh='git reset HEAD'
-# alias grhh='git reset HEAD --hard'
-# alias gclean='git reset --hard && git clean -dfx'
-# alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
-
-
 # Others Aliases:
 # ripgrep -> search tool
-
 
 # Setup Vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
@@ -236,6 +158,7 @@ export NODE_PATH=~/.npm-packages/lib/node_modules
 if [ -e ~/.zsh_plugins.sh ]; then source ~/.zsh_plugins.sh; fi
 
 # CUSTOM ALIASES: 
+alias r=ranger
 alias ls='colorls'
 alias ll='colorls -la'
 alias vi=vim
