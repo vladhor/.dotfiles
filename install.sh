@@ -11,7 +11,7 @@ echo "#############################################"
 echo "####              SOURCING NIX           ####"
 echo "#############################################"
 echo ""
-. ~/.nix-profile/etc/profile.d/nix.sh
+ ~/.nix-profile/etc/profile.d/nix.sh
 
 
 # install packages
@@ -37,6 +37,7 @@ nix-env -iA \
 	nixpkgs.tflint \
 	nixpkgs.jq \
 	nixpkgs.hugo \
+	nixpkgs.lua \
 	nixpkgs.pass \
 	nixpkgs.gnupg \
   nixpkgs.unzip \
@@ -44,8 +45,19 @@ nix-env -iA \
 	nixpkgs.groovy \
 	nixpkgs.tmuxinator \
 	nixpkgs.nodejs \
+	nixpkgs.gcc \
 	nixpkgs.python3 \
+  python310Packages.pip \
   nixpkgs.home-manager
+
+# Required by LSP:
+nix-env -iA \
+      nixpkgs.go \
+      nixpkgs.cargo \
+      nixpkgs.luajitPackages.luarocks \
+      nixpkgs.php81Packages.composer \
+      nixpkgs.php \
+      nixpkgs.jdk
 # Null-ls formatting:
 nix-env -iA \
       nixpkgs.black \

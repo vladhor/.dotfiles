@@ -1,68 +1,125 @@
 " ###############################
 " #######  :HELP OPTIONS  #######
 " ###############################
-set mouse=                                    " Disable the mouse
-set syntax=on                                 " Syntax highlighting to show parts of the text in another font or color
-set spell spelllang=en_us                     " Check for US English. The words that are not recognized are highlighted: z= opens up a list of suggestions, 1z= take the first one, moving between misspelled words: ]s and [s
-set number                                    " Add numbers to each line on the left-hand side
-set relativenumber                            " Show the line number relative to the line with the cursor
-set hidden                                    " It hides buffers instead of closing them. This means that you can have unwritten changes to a file and open a new file using :e , without being forced to write or undo your changes first.
-" Searches
-" Vim by default seaches case sensitively, so if we search for apple we will
-" find exactly that, but not Apple or APPLE
-set ignorecase                                " Searches will become case insensitive, so if I search for apple I will get Apple, APPLE as well as apple
-set smartcase                                 " With both ignorecase and smartcase turned on, a search is case-insensitive if you enter the search string in ALL lower case. For example, searching for apple will find Apple and APPLE. However, if your search string has one or more characters in upper case, it will assume that you want a case-sensitive search. So, searching for Apple will only give you Apple but not apple or APPLE.
-set incsearch                                 " While searching through a file incrementally highlight matching characters as you type
-set hlsearch                                  " Only the matching text is highlighted
-set showmatch		                              " When a brancket is inserted, briefly jump to the matching one
+set nocompatible                              " Disable compatibility with vi which can cause unexpected issues
 set noerrorbells                              " Disable beeping due to Vim may beep or may flash its window if an error occurs
-set smartindent                               " Reacts to the syntax/style of the code you are editing (especially for C). When having it on you also should have autoindent on.
-set autoindent                                " Essentially tells vim to apply the indentation of the current line to the next (created by pressing enter in insert mode or with O or o in normal mode
-set expandtab                                 " 
-set shiftwidth=2                              " Set shift width to 2 spaces
-set tabstop=2 softtabstop=2                   " Set tab 
-set nowrap	                                  " Unser wrap long lines
+set mouse=                                    " Disable the mouse
+set spell spelllang=en_us                     " Check for US English. The words that are not recognized are highlighted: z= opens up a list of suggestions, 1z= take the first one, moving between misspelled words: ]s and [s
+set noswapfile                                " Don't write intermediate swap files
+set nobackup
+" set backupskip='/tmp/*'
+set winblend=0                                " Add transparency to floating windows wheres 100 is fully transparent 
+set splitbelow                                " Splitting a window will put the new window below the current one
+set splitright                                " Splitting a window will put the new window right of the current one
+set scrolloff=25
+set cmdheight=2
+"set clipboard=unnamedplus
+set backspace=indent,eol,start                " indent:	allow backspacing over autoindent; eol:	allow backspacing over line breaks (join lines); start	allow backspacing over the start of insert
 set noswapfile
 set undodir=~/.vim/undodir
 set undofile
-set signcolumn=number
-set splitbelow
-set splitright
-set scrolloff=25
-set noshowmode
-set completeopt=menuone,noinsert,noselect     " 
-set colorcolumn=100	                          " Comma-separated list of screen columns that are highlighted
-set signcolumn=yes                            " The sign features allow both placement of a sign, or icon, in the left-hand side of the window and definition of a highlight which will be applied to that line.
-set cmdheight=2
+" ---------- User interface ----------
+scriptencoding utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set laststatus=2                              " Always display the status bar on the bottom
+set syntax=on                                 " Syntax highlighting to show parts of the text in another font or color
+set hidden                                    " It hides buffers instead of closing them. This means that you can have unwritten changes to a file and open a new file using :e , without being forced to write or undo your changes first.
+set ruler                                     " Always show cursor position in the status bar
+set title                                     " Set the window's title, reflecting the file currently being edited
+set number                                    " Add numbers to each line on the left-hand side
+set relativenumber                            " Show the line number relative to the line with the cursor
+set showcmd                                   " Show the commands which you enter in the file
+set showmode                                  " Always show what mode we're currently editing in
+set wildmenu                                  " Displaycommand line's tab complete options as a menu
+set wildoptions=pum                           " Gives scroll sign on the right side of the wildmenu
+set pumblend=5                                " Adds transparency to wildmenu
+" ---------- Search options ----------
+set ignorecase                                " Searches will become case insensitive, so if I search for apple I will get Apple, APPLE as well as apple
+set smartcase                                 " With both ignorecase and smartcase turned on, a search is case-insensitive if you enter the search string in ALL lower case. For example, searching for apple will find Apple and APPLE. However, if your search string has one or more characters in upper case, it will assume that you want a case-sensitive search. So, searching for Apple will only give you Apple but not apple or APPLE.
+set incsearch                                 " While searching through a file incrementally highlight matching characters as you type
+set hlsearch                                  " Adds a colored background to all the search results
+set showmatch		                              " When a brancket is inserted, briefly jump to the matching one
+" ---------- Indention options ----------
+set smartindent                               " Reacts to the syntax/style of the code you are editing (especially for C). When having it on you also should have autoindent on.
+set autoindent                                " Copy indent from current line when starting a new line
+set expandtab                                 " Enter spaces when tab is pressed
+set shiftround                                " Move selected lines with V using < > by spaces set in shiftwidth
+set shiftwidth=2                              " When indenting with '>', use 4 spaces width
+set tabstop=2                                 " Indent using 2 spaces
+" ---------- Text options ----------
+filetype on 
+set nowrap	                                  " Unser wrap long lines
 set cursorline                                " Highlight the text line
 set cursorcolumn                              " Highlight the screen column of the cursor 
-set autoread                                  " Automatically read files when they've changed
-set nocompatible                              " Disable compatibility with vi which can cause unexpected issues
-set iskeyword+=-                              " It treats the "abc-abc" as a one word
-"set clipboard=unnamedplus
+set colorcolumn=100	                          " Comma-separated list of screen columns that are highlighted
+set signcolumn=yes                            " The sign features allow both placement of a sign, or icon, in the left-hand side of the window and definition of a highlight which will be applied to that line.
+set signcolumn=number
+" set textwidth=120                           " Break lines when line length increases
+"set iskeyword+=-                              " It treats the "abc-abc" as a one word
+set inccommand=split                          " During vim substitution :%s/ open the split in the bottom
+set formatoptions+=j                          " Delete comment characters when joining lines
 
+
+
+" ###############################
+" #######  KEY BINDINGS   #######
+" ###############################
+
+" Leader key
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" Set mapping to save the file with using leader key
+nnoremap <leader>s :w<CR>:so %<CR>:echom 'Saved & Sourced init.vim'<CR>
+
+" Enable/desable hlsearch
+nnoremap <leader>h :noh<CR>
+
+" Don't yank with x
+nnoremap x "_x
+
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" Delete a word backwards
+nnoremap dw vb"_d
+
+" Select all
+nnoremap <C-a> gg<S-v>G
+
+" New tab
+nnoremap te :tabedit<return>
+" Split window
+nnoremap ss :split<return><C-w>w
+nnoremap sv :vsplit<return><C-w>w
+" Move window 
+nnoremap <Space> <C-w>w
+nnoremap sh <C-w>h
+nnoremap sk <C-w>k
+nnoremap sj <C-w>j
+nnoremap sl <C-w>l
+" Resize window
+nnoremap <C-w><left> <C-w><
+nnoremap <C-w><right> <C-w>>
+nnoremap <C-w><up> <C-w>+
+nnoremap <C-w><down> <C-w>-
+
+" Enable/Disable relativenumber & numbers
+function! ToggleLineNumber()
+  set norelativenumber!
+  set nonumber!
+endfunction
+map <leader>n :call ToggleLineNumber()<CR>
+
+" Yank to clipboard
 if system('uname -a | grep microsoft') != ''
   augroup myYank
     autocmd!
     autocmd TextYankPost * :call system('clip.exe', @")
   augroup END
 endif"
-
-
-" ################################
-" #######  VIM LEADER KEY  #######
-" ################################
-let mapleader = " "
-" Set mapping to save the file with using leader key
-noremap <leader>w :w<cr>
-
-
-" #########################################################
-" #######  Turn on/off relativevumbers and numbers  #######
-" #########################################################
-" nnoremap <leader>on :set number relativenumber<CR>
-" nnoremap <leader>on :set number! relativenumber!<CR>
-
 
 " #############################
 " #######  VIU PLUGINS  #######

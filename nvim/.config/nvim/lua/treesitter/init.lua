@@ -9,6 +9,7 @@ require'nvim-treesitter.configs'.setup {
       'gitignore',
       'html',
       'json',
+      'hcl',
       'yaml'
     },
 
