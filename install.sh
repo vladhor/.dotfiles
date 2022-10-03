@@ -44,6 +44,8 @@ nix-env -iA \
 	nixpkgs.helmfile \
 	nixpkgs.groovy \
 	nixpkgs.tmuxinator \
+	nixpkgs.awscli \
+	nixpkgs.aws-vault \
 	nixpkgs.nodejs \
 	nixpkgs.gcc \
 	nixpkgs.python3 \
@@ -121,7 +123,8 @@ npm install -g \
 	dockerfile-language-server-nodejs \
 	vim-language-server \
 	yaml-language-server \
-	tree-sitter-cli
+	tree-sitter-cli \
+  aws-azure-login
 
 
 # # add zsh to valid login shells

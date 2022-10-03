@@ -56,7 +56,7 @@ set colorcolumn=100	                          " Comma-separated list of screen c
 set signcolumn=yes                            " The sign features allow both placement of a sign, or icon, in the left-hand side of the window and definition of a highlight which will be applied to that line.
 set signcolumn=number
 " set textwidth=120                           " Break lines when line length increases
-"set iskeyword+=-                              " It treats the "abc-abc" as a one word
+" set iskeyword+=-                              " It treats the "abc-abc" as a one word
 set inccommand=split                          " During vim substitution :%s/ open the split in the bottom
 set formatoptions+=j                          " Delete comment characters when joining lines
 
@@ -71,7 +71,7 @@ nnoremap <SPACE> <Nop>
 let mapleader = " "
 
 " Set mapping to save the file with using leader key
-nnoremap <leader>s :w<CR>:so %<CR>:echom 'Saved & Sourced init.vim'<CR>
+nnoremap <leader>s :w<CR>:so %<CR>:echom 'Saved & Sourced:'@%<CR>
 
 " Enable/desable hlsearch
 nnoremap <leader>h :noh<CR>
@@ -84,7 +84,7 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 " Delete a word backwards
-nnoremap dw vb"_d
+" nnoremap dw vb"_d
 
 " Select all
 nnoremap <C-a> gg<S-v>G
