@@ -31,7 +31,7 @@ set number                                    " Add numbers to each line on the 
 set relativenumber                            " Show the line number relative to the line with the cursor
 set showcmd                                   " Show the commands which you enter in the file
 set showmode                                  " Always show what mode we're currently editing in
-set wildmenu                                  " Displaycommand line's tab complete options as a menu
+set wildmenu                                  " Display command line's tab complete options as a menu
 set wildoptions=pum                           " Gives scroll sign on the right side of the wildmenu
 set pumblend=5                                " Adds transparency to wildmenu
 " ---------- Search options ----------
@@ -218,6 +218,12 @@ silent! colorscheme gruvbox
 " Ctrl + e      = Exit 
 " CR            = <Carriage return> a.k.a Enter key -> will confirm selection
 " Tab           = Moving inside the parts of snippets
+
+" ###############################
+" ########  SEARCH MODE:  #######
+" ###############################
+" Ctrl + G      = Move to the next match
+" Ctrl + T      = Move to the previous match
 
 
 " #############################

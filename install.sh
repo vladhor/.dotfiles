@@ -35,22 +35,25 @@ nix-env -iA \
 	nixpkgs.ranger \
 	nixpkgs.terraform \
 	nixpkgs.tflint \
-	nixpkgs.jq \
-	nixpkgs.hugo \
-	nixpkgs.lua \
-	nixpkgs.pass \
-	nixpkgs.gnupg \
-  nixpkgs.unzip \
-	nixpkgs.helmfile \
-	nixpkgs.groovy \
 	nixpkgs.tmuxinator \
-	nixpkgs.awscli \
-	nixpkgs.aws-vault \
 	nixpkgs.nodejs \
 	nixpkgs.gcc \
+	nixpkgs.hugo \
+  nixpkgs.unzip \
+	nixpkgs.lua \
+	nixpkgs.jq \
+	nixpkgs.pass \
+	nixpkgs.gnupg \
+	nixpkgs.pinentry \
+	nixpkgs.groovy \
+	nixpkgs.awscli \
+	nixpkgs.aws-vault \
 	nixpkgs.python3 \
   python310Packages.pip \
-  nixpkgs.home-manager
+  nixpkgs.home-manager \
+  nixpkgs.kubectl \
+  nixpkgs.kubectx \
+	nixpkgs.helmfile \
 
 # Required by LSP:
 nix-env -iA \
