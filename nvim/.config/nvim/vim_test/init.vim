@@ -15,7 +15,6 @@ set scrolloff=25
 set cmdheight=2
 "set clipboard=unnamedplus
 set backspace=indent,eol,start                " indent:	allow backspacing over autoindent; eol:	allow backspacing over line breaks (join lines); start	allow backspacing over the start of insert
-set noswapfile
 set undodir=~/.vim/undodir
 set undofile
 " ---------- User interface ----------
@@ -54,7 +53,6 @@ set cursorline                                " Highlight the text line
 set cursorcolumn                              " Highlight the screen column of the cursor 
 set colorcolumn=100	                          " Comma-separated list of screen columns that are highlighted
 set signcolumn=yes                            " The sign features allow both placement of a sign, or icon, in the left-hand side of the window and definition of a highlight which will be applied to that line.
-set signcolumn=number
 " set textwidth=120                           " Break lines when line length increases
 " set iskeyword+=-                              " It treats the "abc-abc" as a one word
 set inccommand=split                          " During vim substitution :%s/ open the split in the bottom

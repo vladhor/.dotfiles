@@ -26,6 +26,7 @@ nix-env -iA \
 	nixpkgs.antibody \
 	nixpkgs.git\
 	nixpkgs.neovim \
+	nixpkgs.vimPlugins.vim-packer \
 	nixpkgs.tmux \
 	nixpkgs.stow \
 	nixpkgs.fzf \
@@ -39,7 +40,7 @@ nix-env -iA \
 	nixpkgs.nodejs \
 	nixpkgs.gcc \
 	nixpkgs.hugo \
-  nixpkgs.unzip \
+	nixpkgs.unzip \
 	nixpkgs.lua \
 	nixpkgs.jq \
 	nixpkgs.pass \
@@ -49,11 +50,12 @@ nix-env -iA \
 	nixpkgs.awscli \
 	nixpkgs.aws-vault \
 	nixpkgs.python3 \
-  python310Packages.pip \
-  nixpkgs.home-manager \
-  nixpkgs.kubectl \
-  nixpkgs.kubectx \
+	python310Packages.pip \
+	nixpkgs.home-manager \
+	nixpkgs.kubectl \
+	nixpkgs.kubectx \
 	nixpkgs.helmfile \
+	nixpkgs.eksctl
 
 # Required by LSP:
 nix-env -iA \
@@ -174,6 +176,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 rm ~/.zshrc
 stow zsh
+
+echo "#############################################"
+echo "####          INSTAL PACKER              ####"
+echo "#############################################"
+echo "" 
+git clone https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 
 
 # Install neovim plugins
