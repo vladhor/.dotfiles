@@ -48,7 +48,7 @@ mason_null_ls.setup({
     "sql-formatter",
     "stylua",
     "yamlfmt",
-    -- LINTERS: 
+    -- LINTERS:
     "cspell",
     "flake8",
     "gitlint",

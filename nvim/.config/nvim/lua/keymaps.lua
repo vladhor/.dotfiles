@@ -149,26 +149,26 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 -- Ctrl + b      = Scrolling option in case of getting more text in snippets/buffers window
 -- Ctrl + f      = Scrolling option in case of getting more text in snippets/buffers window
 -- Ctrl + Space  = Giving us the list of all the available item completion
--- Ctrl + e      = Exit 
+-- Ctrl + e      = Exit
 -- CR            = <Carriage return> a.k.a Enter key -> will confirm selection
 -- Tab           = Moving inside the parts of snippets
--- 
+
 -- ###############################
 -- ########  SEARCH MODE:  #######
 -- ###############################
 -- Ctrl + G      = Move to the next match
 -- Ctrl + T      = Move to the previous match
--- 
--- 
+
+
 -- #############################
 -- ########  TELESCOPE:  #######
 -- #############################
--- <Space> + f           = search for files 
+-- <Space> + f           = search for files
 -- <Space> + F           = search for text in files
 -- <Space> + fr          = search for references in files
 -- <Space> + fb          = seaerch for git branches
--- 
--- 
+
+
 -- #############################
 -- ########  TELESCOPE:  #######
 -- #############################

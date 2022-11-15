@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 lualine.setup({
-  options = { 
+  options = {
     theme = 'gruvbox',
   }
 })
