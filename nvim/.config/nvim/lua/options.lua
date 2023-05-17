@@ -66,3 +66,24 @@ opt.inccommand = 'split'                        -- During vim substitution :%s/ 
 opt.list = true                                 -- By default, show tabs as ">", trailing spaces as "-", and
                                                 -- non-breakable space characters as "+". Useful to see the difference
                                                 -- between tabs and spaces and for trailing blanks.
+if vim.fn.has("wsl") then
+    vim.g.clipboard = {
+        name = "clip.exe (Copy Only)",
+        copy = {
+            ["+"] = "clip.exe",
+            ["*"] = "clip.exe"
+        },
+        paste = {
+            ["+"] = "clip.exe",
+            ["*"] = "clip.exe"
+        },
+        cache_enabled = true
+    }
+end
+
+vim.api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    { pattern = { "*.jenkinsfile", "*.Jenkinsfile", "Jenkinsfile", "jenkinsfile" }, command = "setf groovy" }
+)
+
+-- :e ++ff=unix "Display CRLF as ^M", :setlocal ff=unix "Substitute CRLF for LF:"
