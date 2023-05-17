@@ -52,10 +52,15 @@ nix-env -iA \
 	nixpkgs.python3 \
 	python310Packages.pip \
 	nixpkgs.home-manager \
+  nixpkgs.helm \
 	nixpkgs.kubectl \
 	nixpkgs.kubectx \
 	nixpkgs.helmfile \
 	nixpkgs.eksctl
+
+# Python packages
+nix-env -iA \
+  nixpkgs.python310Packages.boto3
 
 # Required by LSP:
 nix-env -iA \
@@ -87,18 +92,6 @@ nix-env -iA \
 nix-env -iA \
       nixpkgs.fd
 
-
-# # Install left packages via apt
-echo "#############################################"
-echo "####            HELM2 NSTALL             ####"
-echo "#############################################"
-echo ""
-curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
-sudo apt-get install apt-transport-https --yes
-echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
-sudo apt-get update
-sudo apt-get install helm2
- 
 
 # Stow
 echo "#############################################"
