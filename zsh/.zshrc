@@ -146,6 +146,9 @@ if [ -e /home/vlado/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vlado/.nix
 export PATH=~/.npm-packages/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
 
+# Tfenv
+export PATH="$HOME/.tfenv/bin:$PATH"
+
 # Source antibody ohmyzsh plugins
 # NOTE: in case of updated plugin you need to resource 
 if [ -e ~/.zsh_plugins.sh ]; then source ~/.zsh_plugins.sh; fi
@@ -164,3 +167,7 @@ alias vimrc='vim ${HOME}/.config/nvim/init.vim'         # open vim config from a
 
 # Binding Ctrl + Space to autocomplete suggestion after typing command in zsh
 bindkey '^ ' autosuggest-accept
+
+export TMUX_TMPDIR='/tmp'
+
+export PATH=/usr/local/apache-maven/apache-maven-3.8.7/bin:$PATH
