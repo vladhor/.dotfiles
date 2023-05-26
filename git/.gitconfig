@@ -6,3 +6,5 @@
 
 [includeIf "gitdir:~/code/project2/"]
   path = .gitconfig-project2
+[core]
+        editor = vim
