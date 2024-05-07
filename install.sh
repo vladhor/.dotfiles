@@ -56,7 +56,8 @@ nix-env -iA \
 	nixpkgs.kubectl \
 	nixpkgs.kubectx \
 	nixpkgs.helmfile \
-	nixpkgs.eksctl
+	nixpkgs.eksctl \
+  nixpkgs.k9s
 
 # Python packages
 nix-env -iA \

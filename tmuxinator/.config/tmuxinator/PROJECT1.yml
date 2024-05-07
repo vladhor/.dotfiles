@@ -57,6 +57,7 @@ windows:
   # - logs: tail -f log/development.log
 
   - main:
+      root: ~/code/project1/
       layout: main-vertical
       panes:
         - 
